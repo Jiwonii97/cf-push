@@ -19,4 +19,5 @@ fi
 cf api ${INPUT_API} ${cf_opts}
 CF_USERNAME=${INPUT_USERNAME} CF_PASSWORD=${INPUT_PASSWORD} cf auth
 cf target -o ${INPUT_ORG} -s ${INPUT_SPACE}
+cf set-env DISABLE_COLLECTSTATIC 1
 cf push -f ${INPUT_MANIFEST}
